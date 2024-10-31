@@ -40,7 +40,15 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'transactions',
     'rest_framework',
+    'rest_framework_simplejwt',
+    'accounts'
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
