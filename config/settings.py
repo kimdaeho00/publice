@@ -89,8 +89,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',  # PostgreSQL 엔진 설정
+        'NAME': 'publicedb',                # 사용할 데이터베이스 이름
+        'USER': 'username',                     # PostgreSQL 사용자 이름
+        'PASSWORD': 'userpassword',                 # PostgreSQL 비밀번호
+        'HOST': 'localhost',                         # 데이터베이스 호스트
+        'PORT': '5432',                              # PostgreSQL의 기본 포트
     }
 }
 
