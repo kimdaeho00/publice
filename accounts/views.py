@@ -2,6 +2,7 @@ from rest_framework import generics
 from .models import Account
 from .serializers import AccountSerializer
 from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 class AccountListCreateView(generics.ListCreateAPIView):
     queryset = Account.objects.all()
